@@ -3,8 +3,7 @@ import GitHub from './assets/github.png';
 import Mentor from './assets/mentor.png';
 import Telegram from './assets/telegram_icon-icons.webp';
 import LinkedIn from './assets/linkedIn.png';
-import Twitter from './assets/twitter.png';
-import Instagram from './assets/instagram.webp';
+import Facebook from './assets/facebook-icon.png';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -23,21 +22,21 @@ const socialMediaLinks = [
   },
   {
     id: 3,
-     name: 'Telegram',
+    name: 'Telegram',
     logo: Telegram,
     path: 'https://t.me/bornpheakkorny',
   },
   {
     id: 4,
-    name: 'Twitter',
-    logo: Twitter,
-    path: 'https://twitter.com/',
+    name: 'Facebook',
+    logo: Facebook,
+    path: 'https://www.facebook.com/pheakkornymilkyway?mibextid=wwXIfr&mibextid=wwXIfr',
   },
   {
     id: 5,
     name: 'Portfolio Website',
     logo: Mentor,
-    path: 'https://pheakkorny-portfolio.tiiny.site/',
+    path: 'https://portfolio-bornpheakkorny.netlify.app/',
   },
 ];
 
@@ -130,9 +129,8 @@ const App = () => {
                 exit={{ scale: 0 }}
                 transition={{ duration: 0.3 }}
               >
-                I'm a Web developer. I build seamless web experiences and
-                web applications by transforming Figma and Adobe XD designs into
-                real and usable websites and apps
+                My name is Born Pheakkorny. I am a Web developer. I build seamless web experiences and
+                web applications. Click Check out my bio to see my details.
               </motion.p>
 
               <motion.div
@@ -145,7 +143,13 @@ const App = () => {
                 transition={{ duration: 0.3 }}
                 className="cta"
               >
-                <a href={selectedLink.path}>Check out my bio</a>
+                <a
+                  href={selectedLink.path}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Check out my bio
+                </a>
               </motion.div>
 
               <div className="tag">{selectedLink.name}</div>
